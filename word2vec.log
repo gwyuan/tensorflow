@@ -1,0 +1,42 @@
+vagrant@vagrant-ubuntu-trusty-64:~$ cd models/
+vagrant@vagrant-ubuntu-trusty-64:~/models$ ls
+AUTHORS      compression      differential_privacy  im2txt     ISSUE_TEMPLATE.md                 LICENSE  namignizer  neural_programmer      README.md  resnet         slim    swivel     textsum      tutorials         WORKSPACE
+autoencoder  CONTRIBUTING.md  domain_adaptation     inception  learning_to_remember_rare_events  lm_1b    neural_gpu  next_frame_prediction  real_nvp   skip_thoughts  street  syntaxnet  transformer  video_prediction
+vagrant@vagrant-ubuntu-trusty-64:~/models$ cd tutorials/embedding/
+vagrant@vagrant-ubuntu-trusty-64:~/models/tutorials/embedding$ ls
+__init__.py  questions-words.txt  README.md  text8  word2vec_kernels.cc  word2vec_ops.cc  word2vec_optimized.py  word2vec_optimized_test.py  word2vec.py  word2vec_test.py
+vagrant@vagrant-ubuntu-trusty-64:~/models/tutorials/embedding$ TF_INC=$(python -c 'import tensorflow as tf; print(tf.sysconfig.get_include())')
+vagrant@vagrant-ubuntu-trusty-64:~/models/tutorials/embedding$ g++ -std=c++11 -shared word2vec_ops.cc word2vec_kernels.cc -o word2vec_ops.so -fPIC -I $TF_INC -O2 -D_GLIBCXX_USE_CXX11_ABI=0
+vagrant@vagrant-ubuntu-trusty-64:~/models/tutorials/embedding$ python word2vec_optimized.py --train_data=text8 eval_data=questions-words.txt save_path=/tmp/
+--train_data --eval_data and --save_path must be specified.
+vagrant@vagrant-ubuntu-trusty-64:~/models/tutorials/embedding$ python word2vec_optimized.py --train_data=text8 --eval_data=questions-words.txt --save_path=/tmp/
+W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE3 instructions, but these are available on your machine and could speed up CPU computations.
+I word2vec_kernels.cc:200] Data file: text8 contains 100000000 bytes, 17005207 words, 253854 unique words, 71290 unique frequent words.
+Data file:  text8
+Vocab size:  71290  + UNK
+Words per epoch:  17005207
+Killed
+vagrant@vagrant-ubuntu-trusty-64:~/models/tutorials/embedding$ vim word2vec_optimized
+vagrant@vagrant-ubuntu-trusty-64:~/models/tutorials/embedding$ vim word2vec_optimized.py 
+vagrant@vagrant-ubuntu-trusty-64:~/models/tutorials/embedding$ ls
+__init__.py  questions-words.txt  README.md  text8  word2vec_kernels.cc  word2vec_ops.cc  word2vec_ops.so  word2vec_optimized.py  word2vec_optimized_test.py  word2vec.py  word2vec_test.py
+vagrant@vagrant-ubuntu-trusty-64:~/models/tutorials/embedding$ ls /tmp/
+hsperfdata_root  hsperfdata_vagrant  pip_build_vagrant  pip-fSr2o7-unpack  pip-l9uHeJ-uninstall  pip-zxdkf3-build
+vagrant@vagrant-ubuntu-trusty-64:~/models/tutorials/embedding$ python word2vec_optimized.py --train_data=text8 --eval_data=questions-words.txt --save_path=/home/vagrant/tmp/
+W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE3 instructions, but these are available on your machine and could speed up CPU computations.
+I word2vec_kernels.cc:200] Data file: text8 contains 100000000 bytes, 17005207 words, 253854 unique words, 71290 unique frequent words.
+Data file:  text8
+Vocab size:  71290  + UNK
+Words per epoch:  17005207
+Eval analogy file:  questions-words.txt
+Questions:  17827
+Skipped:  1717
+Killed   1 Step   150763: lr = 0.024 words/sec =     3627
+vagrant@vagrant-ubuntu-trusty-64:~/models/tutorials/embedding$ ls ~/tmp/
+vocab.txt
+vagrant@vagrant-ubuntu-trusty-64:~/models/tutorials/embedding$ ls -l ~/tmp/
+total 788
+-rw-rw-r-- 1 vagrant vagrant 804217 Apr 16 17:55 vocab.txt
+vagrant@vagrant-ubuntu-trusty-64:~/models/tutorials/embedding$ vim ~/tmp/vocab.txt 
+vagrant@vagrant-ubuntu-trusty-64:~/models/tutorials/embedding$ 
+
