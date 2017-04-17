@@ -1,0 +1,10 @@
+python word2vec_optimized.py --train_data=text8 --eval_data=questions-words.txt --save_path=/home/vagrant/tmp/
+W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE3 instructions, but these are available on your machine and could speed up CPU computations.
+I word2vec_kernels.cc:200] Data file: text8 contains 100000000 bytes, 17005207 words, 253854 unique words, 71290 unique frequent words.
+Data file:  text8
+Vocab size:  71290  + UNK
+Words per epoch:  17005207
+Eval analogy file:  questions-words.txt
+Questions:  17827
+Skipped:  1717
+Killed   1 Step   150735: lr = 0.024 words/sec =     6612
