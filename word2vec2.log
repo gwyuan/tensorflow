@@ -1,10 +1,40 @@
-python word2vec_optimized.py --train_data=text8 --eval_data=questions-words.txt --save_path=/home/vagrant/tmp/
+python word2vec_optimized.py --train_data=text8_truncated --eval_data=questions-words_truncated_2.txt --save_path=/home/vagrant/tmp/
 W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE3 instructions, but these are available on your machine and could speed up CPU computations.
-I word2vec_kernels.cc:200] Data file: text8 contains 100000000 bytes, 17005207 words, 253854 unique words, 71290 unique frequent words.
-Data file:  text8
-Vocab size:  71290  + UNK
-Words per epoch:  17005207
-Eval analogy file:  questions-words.txt
-Questions:  17827
-Skipped:  1717
-Killed   1 Step   150735: lr = 0.024 words/sec =     6612
+I word2vec_kernels.cc:200] Data file: text8_truncated contains 5000000 bytes, 846987 words, 47046 unique words, 12515 unique frequent words.
+Data file:  text8_truncated
+Vocab size:  12515  + UNK
+Words per epoch:  846987
+Eval analogy file:  questions-words_truncated_2.txt
+Questions:  342
+Skipped:  726
+Epoch    1 Step     7048: lr = 0.024 words/sec =     3297
+Eval   14/342 accuracy =  4.1%
+Epoch    2 Step    14091: lr = 0.023 words/sec =     3096
+Eval   14/342 accuracy =  4.1%
+Epoch    3 Step    21128: lr = 0.022 words/sec =     3006
+Eval    8/342 accuracy =  2.3%
+Epoch    4 Step    28177: lr = 0.020 words/sec =     3101
+Eval   13/342 accuracy =  3.8%
+Epoch    5 Step    35214: lr = 0.019 words/sec =     3202
+Eval   10/342 accuracy =  2.9%
+Epoch    6 Step    42262: lr = 0.018 words/sec =     2709
+Eval    9/342 accuracy =  2.6%
+Epoch    7 Step    49304: lr = 0.017 words/sec =      901
+Eval    9/342 accuracy =  2.6%
+Epoch    8 Step    56347: lr = 0.016 words/sec =     5385
+Eval   10/342 accuracy =  2.9%
+Epoch    9 Step    63402: lr = 0.015 words/sec =     8219
+Eval    8/342 accuracy =  2.3%
+Epoch   10 Step    70445: lr = 0.013 words/sec =     4576
+Eval    9/342 accuracy =  2.6%
+Epoch   11 Step    77481: lr = 0.012 words/sec =     3828
+Eval    9/342 accuracy =  2.6%
+Epoch   12 Step    84518: lr = 0.011 words/sec =     1315
+Eval   11/342 accuracy =  3.2%
+Epoch   13 Step    91567: lr = 0.010 words/sec =     3803
+Eval   10/342 accuracy =  2.9%
+Epoch   14 Step    98614: lr = 0.009 words/sec =     9333
+Eval   10/342 accuracy =  2.9%
+Epoch   15 Step   105669: lr = 0.008 words/sec =     6315
+Eval    9/342 accuracy =  2.6%
+
