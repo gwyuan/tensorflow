@@ -1,4 +1,4 @@
-# tensorflow
+# Tensorflow
 
 http://web.stanford.edu/class/cs20si/lectures/
 
@@ -16,9 +16,10 @@ __tf.Session()__
 A Session object encapsulates the environment in which Operation objects are executed, and Tensor objects are evaluated.
 
 
+# NLP:
+http://web.stanford.edu/class/cs224n/
 
-
-# Word2Vec
+## Word2Vec
 https://github.com/tensorflow/models/tree/master/tutorials/embedding
 
 (Mikolov, et. al.) [Efficient Estimation of Word Representations in Vector Space](http://arxiv.org/abs/1301.3781),
