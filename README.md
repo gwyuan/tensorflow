@@ -1,6 +1,6 @@
 # Tensorflow
 
-http://web.stanford.edu/class/cs20si/lectures/
+http://web.stanford.edu/class/cs20si/
 
 
 Tensorflow is a machine learning system that operates at large scale and in heterogeneous environments.
