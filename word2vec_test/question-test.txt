@@ -1,0 +1,4 @@
+: gram3-comparative
+big bigger bright brighter
+walk walking slow slowing
+
