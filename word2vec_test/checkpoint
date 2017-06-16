@@ -1,0 +1,2 @@
+model_checkpoint_path: "/home/henry/test/word2vec/model.ckpt-2261234"
+all_model_checkpoint_paths: "/home/henry/test/word2vec/model.ckpt-2261234"

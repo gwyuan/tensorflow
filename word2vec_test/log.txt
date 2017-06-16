@@ -1,0 +1,193 @@
+henry@henry-ThinkPad-T430:~/workspace/tensorflow/models/tutorials/embedding$ python word2vec_predict.py --train_data=text8 --eval_data=question-test.txt --save_path=/home/henry/test/word2vec/
+W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE3 instructions, but these are available on your machine and could speed up CPU computations.
+W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.1 instructions, but these are available on your machine and could speed up CPU computations.
+W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.2 instructions, but these are available on your machine and could speed up CPU computations.
+W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX instructions, but these are available on your machine and could speed up CPU computations.
+I word2vec_kernels.cc:200] Data file: text8 contains 100000000 bytes, 17005207 words, 253854 unique words, 71290 unique frequent words.
+Data file:  text8
+Vocab size:  71290  + UNK
+Words per epoch:  17005207
+Eval analogy file:  question-test.txt
+Questions:  2
+Skipped:  1
+Epoch    1 Step   150670: lr = 0.024 words/sec =     7907
+Target word: brighter
+bright
+darker
+taller
+brighter
+Target word: slowing
+slow
+overheating
+drying
+slows
+
+Epoch    2 Step   301401: lr = 0.023 words/sec =     5319
+Target word: brighter
+bright
+brighter
+bigger
+taller
+Target word: slowing
+slow
+walking
+sluggish
+bogged
+
+Epoch    3 Step   452128: lr = 0.021 words/sec =     8637
+Target word: brighter
+bright
+brighter
+bigger
+taller
+Target word: slowing
+slow
+walking
+sluggish
+leisurely
+
+Epoch    4 Step   602887: lr = 0.020 words/sec =    21074
+Target word: brighter
+bright
+brighter
+bigger
+darker
+Target word: slowing
+slow
+walking
+sluggish
+desiccation
+
+Epoch    5 Step   753627: lr = 0.019 words/sec =    21794
+Target word: brighter
+bright
+brighter
+bigger
+darker
+Target word: slowing
+slow
+walking
+sluggish
+desiccation
+
+Epoch    6 Step   904389: lr = 0.018 words/sec =    20752
+Target word: brighter
+bright
+brighter
+bigger
+darker
+Target word: slowing
+slow
+walking
+sluggish
+painless
+
+Epoch    7 Step  1055133: lr = 0.016 words/sec =     2809
+Target word: brighter
+bright
+brighter
+bigger
+darker
+Target word: slowing
+slow
+walking
+painless
+sluggish
+
+Epoch    8 Step  1205917: lr = 0.015 words/sec =    20102
+Target word: brighter
+bright
+brighter
+bigger
+darker
+Target word: slowing
+slow
+walking
+sluggish
+desiccation
+
+Epoch    9 Step  1356698: lr = 0.014 words/sec =    18270
+Target word: brighter
+bright
+brighter
+bigger
+darker
+Target word: slowing
+slow
+walking
+desiccation
+sluggish
+
+Epoch   10 Step  1507529: lr = 0.013 words/sec =    17962
+Target word: brighter
+bright
+brighter
+bigger
+darker
+Target word: slowing
+slow
+walking
+desiccation
+sluggish
+
+Epoch   11 Step  1658328: lr = 0.011 words/sec =    15917
+Target word: brighter
+bright
+brighter
+bigger
+dimmer
+Target word: slowing
+slow
+walking
+gradual
+sluggish
+
+Epoch   12 Step  1809064: lr = 0.010 words/sec =      604
+Target word: brighter
+bright
+bigger
+brighter
+taller
+Target word: slowing
+slow
+walking
+sluggish
+rapid
+
+Epoch   13 Step  1959768: lr = 0.009 words/sec =      502
+Target word: brighter
+bright
+bigger
+brighter
+dimmer
+Target word: slowing
+slow
+walking
+gradual
+tilting
+
+Epoch   14 Step  2110489: lr = 0.008 words/sec =    17316
+Target word: brighter
+bright
+brighter
+bigger
+taller
+Target word: slowing
+slow
+walking
+gradual
+desiccation
+
+Epoch   15 Step  2261234: lr = 0.006 words/sec =    11121
+Target word: brighter
+bright
+brighter
+bigger
+dimmer
+Target word: slowing
+slow
+walking
+gradual
+sluggish
+
+
