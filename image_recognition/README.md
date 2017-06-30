@@ -19,12 +19,26 @@ We can detect edges by taking the values −1−1 and 11 on two adjacent pixels,
 
 From [Gimp Documentation](https://docs.gimp.org/en/plug-in-convmatrix.html)
 
-## Convolutional Networks
+## Convolutional neural networks
 
+http://colah.github.io/posts/2014-07-Conv-Nets-Modular/
 
 ## imagenet
 ### Usage with Python API
 `classify_image.py` downloads the trained model from `tensorflow.org` when the program is run for the first time. 
+
+Load `graph()` from the saved model
+
+```python
+def create_graph():
+  """Creates a graph from saved GraphDef file and returns a saver."""
+  # Creates graph from saved graph_def.pb.
+  with tf.gfile.FastGFile(os.path.join(
+      FLAGS.model_dir, 'classify_image_graph_def.pb'), 'rb') as f:
+    graph_def = tf.GraphDef()
+    graph_def.ParseFromString(f.read())
+    _ = tf.import_graph_def(graph_def, name='')
+```
 
 Run prediction:
 
@@ -56,21 +70,9 @@ with tf.Session() as sess:
       print('%s (score = %.5f)' % (human_string, score))
 ```
 
-Load `graph()` from the saved model
-
-```python
-def create_graph():
-  """Creates a graph from saved GraphDef file and returns a saver."""
-  # Creates graph from saved graph_def.pb.
-  with tf.gfile.FastGFile(os.path.join(
-      FLAGS.model_dir, 'classify_image_graph_def.pb'), 'rb') as f:
-    graph_def = tf.GraphDef()
-    graph_def.ParseFromString(f.read())
-    _ = tf.import_graph_def(graph_def, name='')
-```
-
 ### Example 1
 ![](0.gif)
+
 ```
 henry@henry-ThinkPad-T430:~/PycharmProjects/ImageRecognition/imagenet$ python classify_image.py --image_file 0.jpg
 W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE3 instructions, but these are available on your machine and could speed up CPU computations.
@@ -88,6 +90,7 @@ trimaran (score = 0.00369)
 
 ### Example 2
 ![](2.gif)
+
 ```
 henry@henry-ThinkPad-T430:~/PycharmProjects/ImageRecognition/imagenet$ python classify_image.py --image_file 2.jpg
 W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE3 instructions, but these are available on your machine and could speed up CPU computations.
@@ -104,7 +107,11 @@ suspension bridge (score = 0.01233)
 
 ### Reference
 [1]. Tensorflow Image Recognition Tutorials (https://www.tensorflow.org/tutorials/image_recognition)
+
 [2]. Understanding Convolutions (http://colah.github.io/posts/2014-07-Understanding-Convolutions/)
+
 [3]. Convolution Matrix - Gimp (https://docs.gimp.org/en/plug-in-convmatrix.html)
+
 [4]. Conv Nets (http://colah.github.io/posts/2014-07-Conv-Nets-Modular/)
+
 [4]. How to Build a Simple Image Recognition System with TensorFlow (http://www.wolfib.com/Image-Recognition-Intro-Part-1/)
