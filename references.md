@@ -6,3 +6,5 @@ http://www.wolfib.com/Image-Recognition-Intro-Part-1/
 
 [Inception-v4](https://arxiv.org/pdf/1602.07261.pdf)
 
+https://adeshpande3.github.io/adeshpande3.github.io/The-9-Deep-Learning-Papers-You-Need-To-Know-About.html
+
