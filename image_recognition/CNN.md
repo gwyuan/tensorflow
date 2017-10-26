@@ -25,7 +25,7 @@ The rectifier is, as of 2015, the most popular activation function for deep neur
 From Alex et al
 
 ### Backpropagation
-To update the weights and bias during the training. This is important in the unsupervised training procedure.
+To update the weights and bias during the training.
 
 ![](figures/backprop1.png)
 ![](figures/backprop2.png)

@@ -1,4 +1,4 @@
-# Image Recognition 
+# Image Recognition
 > by Yuan, Yiming Harry
 
 ## Understanding Convolution
@@ -25,7 +25,7 @@ http://colah.github.io/posts/2014-07-Conv-Nets-Modular/
 
 ## imagenet
 ### Usage with Python API
-`classify_image.py` downloads the trained model from `tensorflow.org` when the program is run for the first time. 
+`classify_image.py` downloads the trained model from `tensorflow.org` when the program is run for the first time.
 
 Load `graph()` from the saved model
 
@@ -71,7 +71,7 @@ with tf.Session() as sess:
 ```
 
 ### Example 1
-![](0.gif)
+![](figures/0.gif)
 
 ```
 henry@henry-ThinkPad-T430:~/PycharmProjects/ImageRecognition/imagenet$ python classify_image.py --image_file 0.jpg
@@ -89,7 +89,7 @@ trimaran (score = 0.00369)
 
 
 ### Example 2
-![](2.gif)
+![](figures/2.gif)
 
 ```
 henry@henry-ThinkPad-T430:~/PycharmProjects/ImageRecognition/imagenet$ python classify_image.py --image_file 2.jpg
